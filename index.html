@@ -59,17 +59,23 @@
     .fl-price { background:#eef6ff; color:#0b63c5; padding:6px 10px; border-radius:999px; font-weight:700; font-size:14px; }
     .fl-cta { display:flex; gap:10px; margin-top:4px; }
 
-    /* Agent license */
+     /* Agent license */
     .agent-lic { font-size:14px; color:#666; margin:4px 0 6px; }
+
+    /* Headshot styling */
+    .branding img.headshot { 
+      width: 250px; 
+      border-radius: 50%;             /* makes it a circle */
+      margin-bottom: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle shadow */
+      max-width: 80%;                 /* keeps it responsive on smaller screens */
+      height: auto;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-  <div class="branding">
-  <!-- Headshot -->
-  <img src="assets/carol-headshot-600.png" 
-       alt="Carol Aaker Headshot" 
-       class="headshot">
+
 
   <h1>Carol S. Aaker</h1>
   <div class="agent-lic">CA DRE Lic. #01516533</div>
