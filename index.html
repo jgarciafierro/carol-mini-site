@@ -23,73 +23,17 @@
       font-size: 26px;
     }
     .agent-lic { font-size:14px; color:#666; margin:4px 0 6px; }
+    .phone { font-size:15px; margin-top:6px; font-weight:600; color:#000; }
 
     /* Headshot styling */
     .branding img.headshot { 
       width: 250px; 
-      border-radius: 50%;             /* makes it a circle */
+      border-radius: 50%;
       margin-bottom: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle shadow */
-      max-width: 80%;                 /* keeps it responsive */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      max-width: 80%;
       height: auto;
     }
-
-    /* General button styling */
-    .button {
-      display: block;
-      margin: 10px auto;
-      padding: 14px 20px;
-      font-size: 18px;
-      font-weight: 600;
-      text-decoration: none;
-      text-align: center;
-      border-radius: 8px;
-      border: 2px solid #000;         /* black border */
-      color: #000;                    /* black text */
-      background-color: transparent;  /* outlined by default */
-      max-width: 500px;
-      transition: all 0.3s ease;
-    }
-    .button:hover {
-      background-color: #000;         /* fill on hover */
-      color: #fff;
-    }
-    /* Primary button styling */
-    .primary-button {
-      background-color: #000;         /* filled black */
-      color: #fff;
-    }
-    .primary-button:hover {
-      background-color: #333;         /* lighter hover */
-    }
-
-    /* Featured listings grid */
-    .fl-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
-    .fl-card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-    }
-    .fl-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .fl-meta { padding: 12px; flex:1; display:flex; flex-direction:column; }
-    .fl-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
-    .fl-price { font-weight:bold; color:#000; }
-    .fl-cta { margin-top:auto; display:flex; gap:8px; }
-    .fl-cta .button { flex:1; font-size:15px; padding:10px; }
   </style>
 </head>
 <body>
@@ -97,156 +41,14 @@
     <div class="branding">
       <img src="assets/carol-headshot-600.png" alt="Carol S. Aaker Headshot" class="headshot">
       <h1>Carol S. Aaker</h1>
-      <p class="agent-lic">Realtor® – James Baker Realty, Inc.<br>DRE Lic. #01516533</p>
-    </div>
-
-    <!-- Client Referral Button -->
-    <a class="button primary-button" 
-       href="https://forms.gle/npsvRA9yzureSckLA" 
-       target="_blank" 
-       style="font-size:20px; padding:20px; font-weight:700; margin-top: 10px;">
-      🤝 Client Referral – James Baker Realty
-    </a>
-
-    <hr style="width: 80%; margin: 20px auto; border: 0; height: 1px; background: #e0e0e0;">
-
-    <!-- Buttons Section -->
-    <a class="button primary-button" href="https://forms.gle/86gDKwuogdH8Q5KL9" target="_blank">📩 Client Inquiry Form – Let's Get Started</a>
-    <a class="button" href="https://calendly.com/jorge-jgfrealtor/intro-call-with-jorge-garcia-fierro" target="_blank">🗓️ Book an Intro Call</a>
-    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSep4yeKNuXXDdNinAOYe61EacmRsa6gKIHYdCq_LYjOGjirow/viewform?usp=header" target="_blank">❓ Ask Me a Real Estate Question</a>
-    <a class="button" href="https://g.page/r/CZRkVvH2eod2EBI/review" target="_blank">📝 Leave a Google Review</a>
-    <a class="button" href="https://www.facebook.com/jorgegarciafierro.realtor" target="_blank">👍 Visit My Facebook Page</a>
-    <a class="button" href="https://instagram.com/jgarcia0945.jg" target="_blank">📸 Follow Me on Instagram</a>
-
-    <!-- Main ePropertyWatch CTA -->
-    <a class="button primary-button" href="https://epropertywatch.com/homeownerPage/NeeWrxjN" target="_blank">
-      📊 Get Your Home Value &amp; Updates
-      <span class="cta-sub">Instant estimate + monthly reports</span>
-    </a>
-
-    <!-- JBR Active Listings Button -->
-    <a class="button primary-button" href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank" style="margin-top: 10px;">
-      🏠 James Baker Realty – Current Active Listings
-    </a>
-
-    <!-- Featured Listings — James Baker Realty -->
-    <section id="featured-jbr">
-      <h2>Featured Listings — James Baker Realty, Inc.</h2>
-      <div class="note">💡 Click any card below to view all three active James Baker Realty listings in one page.</div>
-
-      <div class="fl-grid">
-        <!-- Card: 36849 James Place -->
-        <article class="fl-card">
-          <a href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank" rel="noopener">
-            <img src="assets/jbr-36849-james-pl-1200.jpg" alt="36849 James Place, Palmdale">
-          </a>
-          <div class="fl-meta">
-            <div class="fl-row">
-              <h3>36849 James Place, Palmdale, CA 93550</h3>
-              <span class="fl-price">$475,000</span>
-            </div>
-            <div style="font-size:14px; color:#555;">
-              <strong>List #:</strong> 25002330 • <strong>Status:</strong> Active<br>
-              <strong>Cross St.:</strong> Noll Drive • <strong>County:</strong> Los Angeles
-            </div>
-            <div class="fl-cta">
-              <a class="button" href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank">View Listing</a>
-              <a class="button" href="mailto:jorge@jgfrealtor.com?subject=Showing%20Request:%2036849%20James%20Place">Request Tour</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card: 41445 Terrazzo Drive -->
-        <article class="fl-card">
-          <a href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank" rel="noopener">
-            <img src="assets/jbr-41445-terrazzo-1200.jpg" alt="41445 Terrazzo Drive, Palmdale">
-          </a>
-          <div class="fl-meta">
-            <div class="fl-row">
-              <h3>41445 Terrazzo Drive, Palmdale, CA 93551</h3>
-              <span class="fl-price">$648,000</span>
-            </div>
-            <div style="font-size:14px; color:#555;">
-              <strong>List #:</strong> 25006304 • <strong>Status:</strong> Active<br>
-              <strong>Cross St.:</strong> 70th West / Ave M-8 • <strong>County:</strong> Los Angeles
-            </div>
-            <div class="fl-cta">
-              <a class="button" href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank">View Listing</a>
-              <a class="button" href="mailto:jorge@jgfrealtor.com?subject=Showing%20Request:%2041445%20Terrazzo">Request Tour</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card: 1311 E Ave Q-11 -->
-        <article class="fl-card">
-          <a href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank" rel="noopener">
-            <img src="assets/jbr-1311-q11-1200.jpg" alt="1311 E Ave Q-11, Palmdale">
-          </a>
-          <div class="fl-meta">
-            <div class="fl-row">
-              <h3>1311 E Ave Q-11, Palmdale, CA 93550</h3>
-              <span class="fl-price">$449,900</span>
-            </div>
-            <div style="font-size:14px; color:#555;">
-              <strong>List #:</strong> 25003060 • <strong>Status:</strong> Active<br>
-              <strong>Cross St.:</strong> 15th East • <strong>County:</strong> Los Angeles
-            </div>
-            <div class="fl-cta">
-              <a class="button" href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank">View Listing</a>
-              <a class="button" href="mailto:jorge@jgfrealtor.com?subject=Showing%20Request:%201311%20E%20Ave%20Q-11">Request Tour</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <p style="margin-top:14px; font-size:12px; color:#000; display:flex; align-items:center; gap:8px;">
-        <svg viewBox="0 0 64 64" width="20" height="20"><path d="M32 8L6 28v28h16V40h20v16h16V28L32 8z"/><rect x="22" y="30" width="20" height="4"/><rect x="22" y="36" width="20" height="4"/></svg>
-        <span>Equal Housing Opportunity</span> • Broker: James Baker Realty, Inc. • CA DRE Lic. #01295685.
+      <p class="agent-lic">
+        Realtor® – James Baker Realty, Inc.<br>
+        DRE Lic. #01516533
       </p>
-    </section>
-
-    <!-- Today’s Featured Picks -->
-    <a class="button" id="onehome-link" href="#" target="_blank" style="margin-top: 14px;">
-      ✨ Today’s Featured Picks <span class="cta-sub">Curated; may include non-JBR listings</span>
-    </a>
-
-    <!-- Referral banner -->
-    <a href="https://forms.gle/npsvRA9yzureSckLA" target="_blank" rel="noopener">
-      <img src="assets/jbr_form_header_bilingual_smaller.png" alt="James Baker Realty - Jorge Garcia-Fierro" 
-           style="max-width: 600px; width: 100%; height: auto; margin: 30px auto 0; border: 2px solid #000; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    </a>
-
-    <p style="margin-top:6px; font-size:12px; color:#6b6b6f;">
-      Quick contact: <a href="mailto:jorge@jgfrealtor.com">jorge@jgfrealtor.com</a> • <a href="tel:+16614253815">(661) 425-3815</a>
-    </p>
-
-    <p style="margin:8px 0 0; font-size:12px; color:#000; display:flex; align-items:center; justify-content:center; gap:8px;">
-      <svg viewBox="0 0 64 64" width="18" height="18"><path d="M32 8L6 28v28h16V40h20v16h16V28L32 8z"/><rect x="22" y="30" width="20" height="4"/><rect x="22" y="36" width="20" height="4"/></svg>
-      <span>Equal Housing Opportunity</span>
-    </p>
-
-    <style>
-      a[href*="forms.gle"]:hover img { box-shadow: 0 0 20px rgba(0,0,0,0.6); transform: scale(1.02); }
-      @media (max-width: 600px) { a[href*="forms.gle"] img { max-width: 90%; } }
-    </style>
+      <p class="phone">📞 (661) 406-8008</p>
+    </div>
   </div>
-
-  <script>
-    (async () => {
-      const btn = document.getElementById('onehome-link');
-      if (!btn) return;
-      try {
-        const res = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTfIE2gpxz1vWgf9um2ADFnXiQBiy3BJa0BAvbi1H-FPGDJT2_r_C53tVZg8Rvr054fVrRJNAZwY-3q/pub?output=csv', { cache: 'no-store' });
-        if (!res.ok) throw new Error('fetch failed');
-        const text = await res.text();
-        const rows = text.trim().split('\n');
-        if (rows.length < 2) throw new Error('no rows');
-        const cols = rows[1].split(',');
-        const latestLink = (cols[1] || '').replace(/"/g, '').trim();
-        if (latestLink) { btn.href = latestLink; btn.style.display = 'block'; }
-        else { btn.style.display = 'none'; }
-      } catch { btn.style.display = 'none'; }
-    })();
-  </script>
 </body>
 </html>
+
+  
