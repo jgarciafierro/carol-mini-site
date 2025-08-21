@@ -3,155 +3,233 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carol S. Aaker – James Baker Realty</title>
+  <title>Carol S. Aaker – Realtor®</title>
+  <link rel="stylesheet" href="styles.css">
+
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #fafafa;
-      color: #222;
+      color: #333;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
     }
     .container {
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 20px;
       text-align: center;
     }
-    h1 {
-      font-size: 26px;
-      margin: 10px 0 4px;
-    }
-    .agent-lic {
-      font-size: 14px;
-      color: #666;
-      margin: 4px 0 6px;
-    }
+    h1 { font-size: 28px; margin-bottom: 6px; }
+    h2 { font-size: 22px; margin: 20px 0 10px; }
+    p { line-height: 1.5; margin: 10px 0; }
+
+    /* Agent license */
+    .agent-lic { font-size:14px; color:#666; margin:4px 0 6px; }
+
     /* Headshot styling */
     .branding img.headshot { 
       width: 250px; 
-      border-radius: 50%;             /* makes it a circle */
+      border-radius: 50%; /* circle */
       margin-bottom: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle shadow */
-      max-width: 80%;                 /* keeps it responsive on smaller screens */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      max-width: 80%;
       height: auto;
     }
-    a {
-      color: #0066cc;
+
+    /* Buttons */
+    .button {
+      display: block;
+      background: #f5f5f5;
+      color: #333;
       text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .section {
-      margin: 30px 0;
-      text-align: left;
-    }
-    .section h2 {
-      font-size: 20px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 4px;
-      margin-bottom: 12px;
-    }
-    .card {
-      background: #fff;
-      padding: 14px;
-      margin: 10px 0;
+      padding: 14px 18px;
+      margin: 8px auto;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      max-width: 500px;
+      font-size: 16px;
+      transition: all 0.2s ease;
     }
-    .card h3 {
-      margin: 0 0 6px;
+    .button:hover { background: #e0e0e0; }
+    .primary-button {
+      background: #e53935;
+      color: #fff;
+      font-weight: bold;
     }
-    footer {
-      font-size: 12px;
-      color: #666;
-      margin-top: 40px;
+    .primary-button:hover { background: #c62828; }
+    .cta-sub {
+      display:block;
+      font-size:13px;
+      font-weight:400;
+      margin-top:2px;
+      opacity:0.9;
     }
+
+    /* Featured Listings grid */
+    .fl-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    @media (min-width: 600px) {
+      .fl-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .fl-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .fl-card img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+    .fl-meta { padding: 10px; text-align:left; }
+    .fl-row { display:flex; justify-content:space-between; align-items:center; }
+    .fl-price { font-weight:700; color:#e53935; }
+    .fl-cta { display:flex; gap:8px; margin-top:8px; }
   </style>
 </head>
 <body>
   <div class="container">
-
     <div class="branding">
-      <!-- Headshot -->
-      <img src="assets/carol-headshot-600.png" 
-           alt="Carol Aaker Headshot" 
-           class="headshot">
-
+      <img src="assets/carol-headshot-600.png" alt="Carol Aaker Headshot" class="headshot">
       <h1>Carol S. Aaker</h1>
-      <div class="agent-lic">CA DRE Lic. #01516533</div>
-      <p style="margin-top:6px; font-size:12px; color:#6b6b6f;">
-        Quick contact: <a href="mailto:carolaaker@gmail.com">carolaaker@gmail.com</a> • 
-        <a href="tel:+16614068008">(661) 406-8008</a>
-      </p>
+      <div class="agent-lic">Realtor® • CA DRE #01516533</div>
+      <p>James Baker Realty, Inc.<br>Palmdale & Antelope Valley</p>
     </div>
 
-    <div class="section">
-      <h2>James Baker Realty</h2>
-      <p>🏡 Backed by Experience<br>Powered by James Baker Realty, Inc.</p>
-      <p>
-        As a proud agent with James Baker Realty, Inc. (CA Lic. #01295685), I’m supported by one of the Antelope Valley’s most respected brokers — 
-        <strong>James William Baker (CA Lic. #00975357)</strong>.
-      </p>
-      <p>
-        With over 36 years of experience and more than 2,800 closed real estate transactions, James has built a reputation for delivering 
-        <em>“Best Price… Best Terms… Every Time!”</em>
-      </p>
-      <blockquote>
-        "DO IT NOW… GET IT DONE… and IMPROVE EVERY DAY!" – James Baker
-      </blockquote>
-      <p>
-        Backed by his guidance and leadership, I’m committed to providing you with smart strategies, personal attention, and trusted results.
-      </p>
-    </div>
+    <!-- Client Referral Button -->
+    <a class="button primary-button" 
+       href="https://forms.gle/npsvRA9yzureSckLA" 
+       target="_blank" 
+       style="font-size:20px; padding:20px; font-weight:700; margin-top: 10px;">
+      🤝 Client Referral – James Baker Realty
+    </a>
 
-    <div class="section">
-      <h2>Quick Links</h2>
-      <ul>
-        <li>🤝 <a href="#">Client Referral – James Baker Realty</a></li>
-        <li>📩 <a href="#">Client Inquiry Form – Let's Get Started</a></li>
-        <li>🗓️ <a href="#">Book an Intro Call</a></li>
-        <li>❓ <a href="#">Ask Me a Real Estate Question</a></li>
-        <li>📝 <a href="#">Leave a Google Review</a></li>
-        <li>👍 <a href="#">Visit My Facebook Page</a></li>
-        <li>📸 <a href="#">Follow Me on Instagram</a></li>
-        <li>📊 <a href="#">Get Your Home Value & Updates</a></li>
-      </ul>
-    </div>
+    <hr style="width: 80%; margin: 20px auto; border: 0; height: 1px; background: #e0e0e0;">
 
-    <div class="section">
+    <!-- Buttons Section -->
+    <a class="button primary-button" href="https://forms.gle/86gDKwuogdH8Q5KL9" target="_blank">📩 Client Inquiry Form – Let's Get Started</a>
+    <a class="button" href="https://calendly.com/jorge-jgfrealtor/intro-call-with-jorge-garcia-fierro" target="_blank">🗓️ Book an Intro Call</a>
+    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSep4yeKNuXXDdNinAOYe61EacmRsa6gKIHYdCq_LYjOGjirow/viewform?usp=header" target="_blank">❓ Ask Me a Real Estate Question</a>
+    <a class="button" href="https://g.page/r/CZRkVvH2eod2EBI/review" target="_blank">📝 Leave a Google Review</a>
+    <a class="button" href="https://www.facebook.com/jorgegarciafierro.realtor" target="_blank">👍 Visit My Facebook Page</a>
+    <a class="button" href="https://instagram.com/jgarcia0945.jg" target="_blank">📸 Follow Me on Instagram</a>
+
+    <!-- Main ePropertyWatch CTA -->
+    <a class="button primary-button" href="https://epropertywatch.com/homeownerPage/NeeWrxjN" target="_blank">
+      📊 Get Your Home Value &amp; Updates
+      <span class="cta-sub">Instant estimate + monthly reports</span>
+    </a>
+
+    <!-- JBR Active Listings Button -->
+    <a class="button primary-button" href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank" style="margin-top: 10px;">
+      🏠 James Baker Realty – Current Active Listings
+    </a>
+
+    <!-- Featured Listings — James Baker Realty -->
+    <section id="featured-jbr">
       <h2>Featured Listings — James Baker Realty, Inc.</h2>
-      <p>💡 Click any card below to view all three active James Baker Realty listings in one page.</p>
+      <div class="note">💡 Click any card below to view all three active James Baker Realty listings in one page.</div>
 
-      <div class="card">
-        <h3>36849 James Place, Palmdale</h3>
-        <p>$475,000</p>
-        <p>List #: 25002330 • Status: Active<br>Cross St.: Noll Drive • County: Los Angeles</p>
-        <a href="#">View Listing</a> • <a href="#">Request Tour</a>
+      <div class="fl-grid">
+        <!-- Card: 36849 James Place -->
+        <article class="fl-card">
+          <a href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank">
+            <img src="assets/jbr-36849-james-pl-1200.jpg" alt="36849 James Place, Palmdale">
+          </a>
+          <div class="fl-meta">
+            <div class="fl-row">
+              <h3>36849 James Place, Palmdale, CA 93550</h3>
+              <span class="fl-price">$475,000</span>
+            </div>
+            <div><strong>List #:</strong> 25002330 • <strong>Status:</strong> Active</div>
+            <div class="fl-cta">
+              <a class="button" href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank">View Listing</a>
+              <a class="button" href="mailto:jorge@jgfrealtor.com?subject=Showing%20Request:%2036849%20James%20Place">Request Tour</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: 41445 Terrazzo Drive -->
+        <article class="fl-card">
+          <a href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank">
+            <img src="assets/jbr-41445-terrazzo-1200.jpg" alt="41445 Terrazzo Drive, Palmdale">
+          </a>
+          <div class="fl-meta">
+            <div class="fl-row">
+              <h3>41445 Terrazzo Drive, Palmdale, CA 93551</h3>
+              <span class="fl-price">$648,000</span>
+            </div>
+            <div><strong>List #:</strong> 25006304 • <strong>Status:</strong> Active</div>
+            <div class="fl-cta">
+              <a class="button" href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank">View Listing</a>
+              <a class="button" href="mailto:jorge@jgfrealtor.com?subject=Showing%20Request:%2041445%20Terrazzo">Request Tour</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: 1311 E Ave Q-11 -->
+        <article class="fl-card">
+          <a href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank">
+            <img src="assets/jbr-1311-q11-1200.jpg" alt="1311 E Ave Q-11, Palmdale">
+          </a>
+          <div class="fl-meta">
+            <div class="fl-row">
+              <h3>1311 E Ave Q-11, Palmdale, CA 93550</h3>
+              <span class="fl-price">$449,900</span>
+            </div>
+            <div><strong>List #:</strong> 25003060 • <strong>Status:</strong> Active</div>
+            <div class="fl-cta">
+              <a class="button" href="https://www.flexmls.com/share/CdOnU/Selected" target="_blank">View Listing</a>
+              <a class="button" href="mailto:jorge@jgfrealtor.com?subject=Showing%20Request:%201311%20E%20Ave%20Q-11">Request Tour</a>
+            </div>
+          </div>
+        </article>
       </div>
 
-      <div class="card">
-        <h3>41445 Terrazzo Drive, Palmdale</h3>
-        <p>$648,000</p>
-        <p>List #: 25006304 • Status: Active<br>Cross St.: 70th West / Ave M-8 • County: Los Angeles</p>
-        <a href="#">View Listing</a> • <a href="#">Request Tour</a>
-      </div>
+      <p style="margin-top:14px; font-size:12px; color:#000; display:flex; align-items:center; gap:8px;">
+        <svg viewBox="0 0 64 64" width="20" height="20"><path d="M32 8L6 28v28h16V40h20v16h16V28L32 8z" fill="currentColor"/><rect x="22" y="30" width="20" height="4" fill="currentColor"/><rect x="22" y="36" width="20" height="4" fill="currentColor"/></svg>
+        <span>Equal Housing Opportunity</span> • Broker: James Baker Realty, Inc. • CA DRE Lic. #01295685
+      </p>
+    </section>
 
-      <div class="card">
-        <h3>1311 E Ave Q-11, Palmdale</h3>
-        <p>$449,900</p>
-        <p>List #: 25003060 • Status: Active<br>Cross St.: 15th East • County: Los Angeles</p>
-        <a href="#">View Listing</a> • <a href="#">Request Tour</a>
-      </div>
-    </div>
+    <!-- Today’s Featured Picks -->
+    <a class="button" id="onehome-link" href="#" target="_blank" style="margin-top: 14px;">
+      ✨ Today’s Featured Picks <span class="cta-sub">Curated; may include non-JBR listings</span>
+    </a>
 
-    <footer>
-      Equal Housing Opportunity • Broker: James Baker Realty, Inc. • CA DRE Lic. #01295685.<br>
-      Photos courtesy of the listing brokerage. Information deemed reliable but not guaranteed.
-    </footer>
+    <!-- Referral banner -->
+    <a href="https://forms.gle/npsvRA9yzureSckLA" target="_blank">
+      <img src="assets/jbr_form_header_bilingual_smaller.png" alt="James Baker Realty - Jorge Garcia-Fierro"
+           style="max-width: 600px; width: 100%; border: 2px solid #e53935; border-radius: 10px; margin:30px auto 0;">
+    </a>
 
+    <p style="margin-top:6px; font-size:12px; color:#6b6b6f;">
+      Quick contact: <a href="mailto:jorge@jgfrealtor.com">jorge@jgfrealtor.com</a> • <a href="tel:+16614253815">(661) 425-3815</a>
+    </p>
   </div>
+
+  <script>
+    (async () => {
+      const btn = document.getElementById('onehome-link');
+      if (!btn) return;
+      try {
+        const res = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTfIE2gpxz1vWgf9um2ADFnXiQBiy3BJa0BAvbi1H-FPGDJT2_r_C53tVZg8Rvr054fVrRJNAZwY-3q/pub?output=csv');
+        const text = await res.text();
+        const rows = text.trim().split('\n');
+        if (rows.length >= 2) {
+          const cols = rows[1].split(',');
+          const link = (cols[1]||'').replace(/"/g,'').trim();
+          if (link) btn.href = link; else btn.style.display='none';
+        } else btn.style.display='none';
+      } catch { btn.style.display='none'; }
+    })();
+  </script>
 </body>
 </html>
+
