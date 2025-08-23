@@ -20,18 +20,45 @@
 
     /* Headshot styling */
     .branding img.headshot {
-      width: 250px; border-radius: 50%;
+      width: 250px;
       margin-bottom: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      max-width: 80%; height: auto;
+      max-width: 80%;
+      height: auto;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="branding">
-      <img src="assets/carol-headshot-600.png" alt="Carol S Aaker Headshot" class="headshot" />
+      <picture>
+        <!-- WebP (preferred) -->
+        <source
+          type="image/webp"
+          srcset="
+            assets/carol-headshot-transparent-300.webp 300w,
+            assets/carol-headshot-transparent-500.webp 500w,
+            assets/carol-headshot-transparent-600.webp 600w
+          "
+          sizes="(max-width: 640px) 300px, 250px"
+        />
+        <!-- PNG fallback -->
+        <img
+          src="assets/carol-headshot-transparent-500.png"
+          srcset="
+            assets/carol-headshot-transparent-300.png 300w,
+            assets/carol-headshot-transparent-500.png 500w,
+            assets/carol-headshot-transparent-600.png 600w
+          "
+          sizes="(max-width: 640px) 300px, 250px"
+          alt="Carol S Aaker Headshot"
+          class="headshot"
+          width="250" height="250"
+          loading="lazy" decoding="async"
+        />
+      </picture>
       <h1>Carol S Aaker</h1>
+
       <p class="agent-lic">
         Realtor® – James Baker Realty, Inc.<br/>
         DRE Lic. #01516533
@@ -44,3 +71,4 @@
   </div>
 </body>
 </html>
+
